@@ -5,7 +5,7 @@ $currentPage = basename($_SERVER["PHP_SELF"]);
         <div class="container py-1">
           <div class="row align-items-center">
             <div class="col-8 col-md-8 col-lg-4">
-              <h1 class="mb-0"><a href="index.php" class="text-white h2 mb-0"><strong>Homeland<span class="text-danger">.</span></strong></a></h1>
+              <h1 class="mb-0"><a href="index.php" class="text-white h2 mb-0"><strong>SOMOS PROPIEDAD<span class="text-danger">.</span></strong></a></h1>
             </div>
             <div class="col-4 col-md-4 col-lg-8">
               <nav class="site-navigation text-right text-md-right" role="navigation">
@@ -14,15 +14,15 @@ $currentPage = basename($_SERVER["PHP_SELF"]);
 
                 <ul class="site-menu js-clone-nav d-none d-lg-block">
                   <li class="<?php echo $currentPage == "index.php" ? "active" : "" ?>">
-                    <a href="index.php">Home</a>
+                    <a href="index.php">Inicio</a>
                   </li>
                   <li class="<?php echo $currentPage == "buy.php" ? "active" : "" ?>">
-                    <a href="buy.php">Buy</a></li>
+                    <a href="buy.php">Comprar</a></li>
                   <li class="<?php echo $currentPage == "rent.php" ? "active" : "" ?>">
-                    <a href="rent.php">Rent</a></li>
-                  <li class="has-children <?php echo $currentPage == "properties.php" ? "active" : "" ?>">
-                    <a href="properties.php">Properties</a>
-                    <ul class="dropdown arrow-top">
+                    <a href="rent.php">Alquilar</a></li>
+                  <li class="<?php echo $currentPage == "properties.php" ? "active" : "" ?>">
+                    <a href="properties.php">Propiedades</a>
+                    <!-- <ul class="dropdown arrow-top">
                       <li><a href="#">Condo</a></li>
                       <li><a href="#">Property Land</a></li>
                       <li><a href="#">Commercial Building</a></li>
@@ -34,14 +34,12 @@ $currentPage = basename($_SERVER["PHP_SELF"]);
                           <li><a href="#">Menu Three</a></li>
                         </ul>
                       </li>
-                    </ul>
+                    </ul> -->
                   </li>
-                  <li class="<?php echo $currentPage == "blog.php" ? "active" : "" ?>">
-                    <a href="blog.php">Blog</a></li>
                   <li class="<?php echo $currentPage == "about.php" ? "active" : "" ?>">
-                    <a href="about.php">About</a></li>
+                    <a href="about.php">Acerda de</a></li>
                   <li class="<?php echo $currentPage == "contact.php" ? "active" : "" ?>">
-                    <a href="contact.php">Contact</a></li>
+                    <a href="contact.php">Contacto</a></li>
                 </ul>
               </nav>
             </div>
