@@ -29,23 +29,15 @@
                         </ul>
                     </div>
                 </div>
-
-
             </div>
-
             <div class="col-lg-4 mb-5 mb-lg-0">
                 <h3 class="footer-heading mb-4">Síguenos</h3>
-
                 <div>
                     <a href="https://www.facebook.com/somospropiedadinmobiliaria" target="__blank" class="pl-0 pr-3"><span class="icon-facebook"></span></a>
-                    <a href="https://www.instagram.com/somospropiedad_inmobiliaria/" target="__blank"  class="pl-3 pr-3"><span class="icon-instagram"></span></a>
+                    <a href="https://www.instagram.com/somospropiedad_inmobiliaria/" target="__blank" class="pl-3 pr-3"><span class="icon-instagram"></span></a>
                     <a href="https://wa.link/hmoin4" target="__blank" class="pl-3 pr-3"><span class="icon-whatsapp"></span></a>
                 </div>
-
-
-
             </div>
-
         </div>
         <div class="row pt-5 mt-5 text-center">
             <div class="col-md-12">
@@ -62,3 +54,6 @@
         </div>
     </div>
 </footer>
+<aside class="button-floating">
+    <a target="_blank" href="https://wa.link/hmoin4"><span class="icon-whatsapp"></span></a>
+</aside>
