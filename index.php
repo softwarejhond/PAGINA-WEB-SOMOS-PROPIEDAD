@@ -259,6 +259,5 @@
   </div>
 
   <?php include './controllers/scripts.php' ?>
-    
   </body>
 </html>
