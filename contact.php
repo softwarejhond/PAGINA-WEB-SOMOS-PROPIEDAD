@@ -36,7 +36,7 @@
         <div class="row">
           <div class="col-md-12 col-lg-8 mb-5">
           
-            <form action="#" class="p-5 bg-white border">
+            <form action="#" class="p-5 bg-white border" style="border-radius: 10px;">
 
               <div class="row form-group">
                 <div class="col-md-12 mb-3 mb-md-0">
@@ -67,7 +67,7 @@
 
               <div class="row form-group">
                 <div class="col-md-12">
-                  <input type="submit" value="Enviar Mensaje" class="btn btn-primary  py-2 px-4 rounded-0">
+                  <input type="submit" value="Enviar Mensaje" class="btn btn-primary  py-2 px-4 rounded-2">
                 </div>
               </div>
 

@@ -24,7 +24,6 @@
                         <ul class="list-unstyled">
                             <li><a href="about.php">Acerca de Nosotros</a></li>
                             <li><a href="policies.php">Políticas Privacidad</a></li>
-                            <li><a href="policies.php">Políticas de Privacidad</a></li>
                             <li><a href="contact.php">Contacto</a></li>
                         </ul>
                     </div>
