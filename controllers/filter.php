@@ -1,13 +1,13 @@
 <div class="site-section site-section-sm pb-0">
     <div class="container">
         <div class="row">
-            <form class="form-search col-md-12" style="margin-top: -100px;">
+            <form class="form-search col-md-12" style="margin-top: -100px; border-radius: 10px;">
                 <div class="row  align-items-end">
                     <div class="col-md-3">
                         <label for="list-types">Tipo de Inmueble</label>
                         <div class="select-wrap">
                             <span class="icon icon-arrow_drop_down"></span>
-                            <select name="list-types" id="list-types" class="form-control d-block rounded-0">
+                            <select name="list-types" id="list-types" class="form-control d-block rounded-2">
                                 <option value="">Seleccionar</option>
                                 <option value="">Casa</option>
                                 <option value="">Apartamento</option>
@@ -21,7 +21,7 @@
                         <label for="offer-types">Tipo de Negocio</label>
                         <div class="select-wrap">
                             <span class="icon icon-arrow_drop_down"></span>
-                            <select name="offer-types" id="offer-types" class="form-control d-block rounded-0">
+                            <select name="offer-types" id="offer-types" class="form-control d-block rounded-2">
                                 <option value="">Seleccionar</option>
                                 <option value="">Para Vender</option>
                                 <option value="">Para Alquilar</option>
@@ -32,7 +32,7 @@
                         <label for="select-city">Seleccionar Ciudad</label>
                         <div class="select-wrap">
                             <span class="icon icon-arrow_drop_down"></span>
-                            <select name="select-city" id="select-city" class="form-control d-block rounded-0">
+                            <select name="select-city" id="select-city" class="form-control d-block rounded-2">
                                 <option value="">Seleccionar</option>
                                 <option value="">Sabaneta</option>
                                 <option value="">Envgigado</option>
@@ -43,7 +43,7 @@
                         </div>
                     </div>
                     <div class="col-md-3">
-                        <input type="submit" class="btn btn-success text-white btn-block rounded-0" value="Buscar">
+                        <input type="submit" class="btn btn-success text-white btn-block rounded-2" value="Buscar">
                     </div>
                 </div>
             </form>
@@ -67,7 +67,7 @@
 
                         <div class="select-wrap">
                             <span class="icon icon-arrow_drop_down"></span>
-                            <select class="form-control form-control-sm d-block rounded-0">
+                            <select class="form-control form-control-sm d-block rounded-2">
                                 <option value="">Más Económico</option>
                                 <option value="">Precio Ascendente</option>
                                 <option value="">Precio Descendente</option>

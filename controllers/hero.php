@@ -6,7 +6,7 @@
                 <div class="col-md-10">
                     <span class="d-inline-block bg-success text-white px-3 mb-3 property-offer-type rounded">Para Alquilar</span>
                     <h1 class="mb-2">871 Crenshaw Blvd</h1>
-                    <p class="mb-5"><strong class="h2 text-success font-weight-bold">$2,250,500</strong></p>
+                    <p class="mb-5"><strong class="h2 font-weight-bold">$2,250,500</strong></p>
                     <p><a href="./property-details.php" class="btn btn-white btn-outline-white py-3 px-5 rounded-0 btn-2">Ver Detalles</a></p>
                 </div>
             </div>
@@ -19,7 +19,7 @@
                 <div class="col-md-10">
                     <span class="d-inline-block bg-danger text-white px-3 mb-3 property-offer-type rounded">Para Vender</span>
                     <h1 class="mb-2">625 S. Berendo St</h1>
-                    <p class="mb-5"><strong class="h2 text-success font-weight-bold">$1,000,500</strong></p>
+                    <p class="mb-5"><strong class="h2 font-weight-bold">$1,000,500</strong></p>
                     <p><a href="./property-details.php" class="btn btn-white btn-outline-white py-3 px-5 rounded-0 btn-2">Ver Detalles</a></p>
                 </div>
             </div>
