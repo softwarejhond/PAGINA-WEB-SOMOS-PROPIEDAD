@@ -24,6 +24,8 @@ $currentPage = basename($_SERVER["PHP_SELF"]);
                     <a href="client.php">Clientes</a></li>
                   <li class="<?php echo $currentPage == "contact.php" ? "active" : "" ?>">
                     <a href="contact.php">Contacto</a></li>
+                    <li class="<?php echo $currentPage == "https://somospropiedad.com/admin" ? "active" : "" ?>">
+                    <a href="https://somospropiedad.com/admin" target="_blank"><i class="bi bi-ui-checks-grid"></i> Administración</a></li>
                 </ul>
               </nav>
             </div>
