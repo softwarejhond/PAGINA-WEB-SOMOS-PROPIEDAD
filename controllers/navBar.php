@@ -16,28 +16,12 @@ $currentPage = basename($_SERVER["PHP_SELF"]);
                   <li class="<?php echo $currentPage == "index.php" ? "active" : "" ?>">
                     <a href="index.php">Inicio</a>
                   </li>
-                  <li class="<?php echo $currentPage == "buy.php" ? "active" : "" ?>">
-                    <a href="buy.php">Comprar</a></li>
-                  <li class="<?php echo $currentPage == "rent.php" ? "active" : "" ?>">
-                    <a href="rent.php">Alquilar</a></li>
-                  <li class="<?php echo $currentPage == "properties.php" ? "active" : "" ?>">
-                    <a href="properties.php">Propiedades</a>
-                    <!-- <ul class="dropdown arrow-top">
-                      <li><a href="#">Condo</a></li>
-                      <li><a href="#">Property Land</a></li>
-                      <li><a href="#">Commercial Building</a></li>
-                      <li class="has-children">
-                        <a href="#">Sub Menu</a>
-                        <ul class="dropdown">
-                          <li><a href="#">Menu One</a></li>
-                          <li><a href="#">Menu Two</a></li>
-                          <li><a href="#">Menu Three</a></li>
-                        </ul>
-                      </li>
-                    </ul> -->
-                  </li>
                   <li class="<?php echo $currentPage == "about.php" ? "active" : "" ?>">
-                    <a href="about.php">Acerda de</a></li>
+                    <a href="about.php">Nosotros</a></li>
+                    <li class="<?php echo $currentPage == "about.php" ? "active" : "" ?>">
+                    <a href="services.php">Servicios</a></li>
+                    <li class="<?php echo $currentPage == "about.php" ? "active" : "" ?>">
+                    <a href="client.php">Clientes</a></li>
                   <li class="<?php echo $currentPage == "contact.php" ? "active" : "" ?>">
                     <a href="contact.php">Contacto</a></li>
                 </ul>
