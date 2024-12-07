@@ -77,18 +77,13 @@ $canonFormateado = number_format($row['valor_canon'], 0, ',', '.');
                             <span class="icon icon-arrow_drop_down"></span>
                             <select id="piso" class="form-control d-block rounded-2">
                                 <option value="">Seleccionar</option>
-                                <option value="0">0</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                                <option value="6">6</option>
-                                <option value="7">7</option>
-                                <option value="8">8</option>
-                                <option value="9">9</option>
-                                <option value="10">10</option>
+                                <?php
+                                for ($i = 0; $i <= 50; $i++) {
+                                    echo "<option value=\"$i\">$i</option>";
+                                }
+                                ?>
                             </select>
+
                         </div>
                     </div>
 
@@ -99,18 +94,13 @@ $canonFormateado = number_format($row['valor_canon'], 0, ',', '.');
                             <span class="icon icon-arrow_drop_down"></span>
                             <select id="habitaciones" name="habitaciones" class="form-control d-block rounded-2">
                                 <option value="">Seleccionar</option>
-                                <option value="0">0</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                                <option value="6">6</option>
-                                <option value="7">7</option>
-                                <option value="8">8</option>
-                                <option value="9">9</option>
-                                <option value="10">10</option>
+                                <?php
+                                for ($i = 0; $i <= 10; $i++) {
+                                    echo "<option value=\"$i\">$i</option>";
+                                }
+                                ?>
                             </select>
+
                         </div>
                     </div>
 
@@ -367,7 +357,7 @@ $canonFormateado = number_format($row['valor_canon'], 0, ',', '.');
                 <ul class="property-specs-wrap mb-3 mb-lg-0">
                   <li>
                     <span class="property-specs">Habitaciones</span>
-                    <span class="property-specs-number">${item.alcobas}</span>
+                    <span class="property-specs-number ">${item.alcobas}</span>
 
                   </li>
                   <li>
@@ -390,7 +380,9 @@ $canonFormateado = number_format($row['valor_canon'], 0, ',', '.');
                     <span class="property-specs-number">${item.cocina}</span>
 
                   </li>
+                  
                 </ul>
+                  <a class="btn btn-primary" data-toggle="collapse" href="#" role="button" aria-expanded="false" aria-controls="collapseExample">Ver detalles </a>
               </div>
 
             </div>

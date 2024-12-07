@@ -14,9 +14,10 @@
                     <div class="col-md-6 col-lg-6">
                         <ul class="list-unstyled">
                             <li><a href="index.php">Inicio</a></li>
-                            <li><a href="buy.php">Comprar</a></li>
-                            <li><a href="rent.php">Alquilar</a></li>
-                            <li><a href="properties.php">Propiedades</a></li>
+                            <li><a href="about.php">Nosotros</a></li>
+                            <li><a href="services.php">Servicios</a></li>
+                            <li><a href="clientes.php">Clientes</a></li>
+                            <li><a href="contact.php">Contacto</a></li>
                         </ul>
                     </div>
                 </div>

@@ -2,7 +2,10 @@
 <html lang="en">
 
 <head>
-  <?php include './controllers/head.php' ?>
+  <?php 
+    include './controllers/conexion.php';
+  include './controllers/head.php'; 
+  ?>
 
 </head>
 
