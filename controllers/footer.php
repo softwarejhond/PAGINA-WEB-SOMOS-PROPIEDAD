@@ -4,9 +4,7 @@
             <div class="col-lg-4">
                 <div class="mb-5">
                     <h3 class="footer-heading mb-4">Acerca de Nosotros</h3>
-                    <p>Somos propiedad es una empresa perteneciente al gremio inmobiliario que presta todos los
-                        servicios que tienen que ver con la renta de propiedades, ventas, asesorías legales, avalúos de
-                        propiedades, prestamos de Dinero a Interés y expedición de certificados. </p>
+                    <p>Somos propiedad es una empresa perteneciente al gremio inmobiliario que presta todos los servicios que tienen que ver con la renta de propiedades, ventas, asesorías legales, avalúos de propiedades, prestamos de Dinero a Interés y expedición de certificados. </p>
                 </div>
             </div>
             <div class="col-lg-4 mb-5 mb-lg-0">
@@ -23,6 +21,9 @@
                         </ul>
                     </div>
                     <div class="col-md-6 col-lg-6">
+                        <div class="col-md-12">
+                            <h3 class="footer-heading mb-4">Navegación</h3>
+                        </div>
                         <ul class="list-unstyled">
                             <li><a href="about.php">Acerca de Nosotros</a></li>
                             <li><a href="policies.php">Políticas Privacidad</a></li>
@@ -50,12 +51,9 @@
                     Copyright &copy;<script data-cfasync="false"
                         src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
                     <script>
-                    document.write(new Date().getFullYear());
-                    </script> Todos los Derechos Reservados para SOMOS PROPIEDAD S.A.S <br>
-                    Made by <a href="https://agenciaeaglesoftware.com/" target="_blank">Agencia
-                        Eagle Software</a></a>
-                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY
-                        3.0. -->
+                        document.write(new Date().getFullYear());
+                    </script> Todos los Derechos Reservados por SOMOS PROPIEDAD S.A.S
+                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                 </p>
             </div>
 
