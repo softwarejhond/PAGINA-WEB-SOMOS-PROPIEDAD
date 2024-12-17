@@ -30,7 +30,7 @@
                     <li><a href="about.php">Acerca de Nosotros</a></li>
                     <li><a href="policies.php">Políticas Privacidad</a></li>
                     <li><a href="contact.php">Contacto</a></li>
-                    <li><a href="#"></a></li>
+                    <li><a href="lawRent.php">Ley de Arrendamiento</a></li>
                 </ul>
             </div>
             <div class="col-lg-3 mb-5 mb-lg-0">
@@ -53,7 +53,7 @@ $queryCompany = mysqli_query($conn, "SELECT nombre,nit FROM company");
 while ($empresaLog = mysqli_fetch_array($queryCompany)) {
     $empresa = $empresaLog['nombre'] . '</label>';
 }
-?>
+ ?>
 <br>
 <b class="text-white">&copy; Copyright <?php echo date("Y"); ?> Todos los derechos de uso para <label class="text-lime-dark"><b><?php echo $empresa ?> </b></label><br>
 Made by <a class="text-light" href="https://agenciaeaglesoftware.com/" target="_blank">Agencia de Desarrollo Eagle Software</a>
