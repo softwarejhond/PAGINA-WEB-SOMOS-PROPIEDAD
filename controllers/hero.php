@@ -13,7 +13,7 @@ $result = $conn->query($query);
 if ($result->num_rows > 0): ?>
 <div class="slide-one-item home-slider owl-carousel">
     <?php while ($row = $result->fetch_assoc()): ?>
-    <div class="site-blocks-cover overlay" style="background-image: url(https://adminweb.somospropiedad.com/admin/img/carousel/<?php echo htmlspecialchars($row['url_image']); ?>);" data-aos="fade" data-stellar-background-ratio="0.5">
+    <div class="site-blocks-cover overlay" style="background-image: url(https://somospropiedad.com/admin/img/carousel/<?php echo htmlspecialchars($row['url_image']); ?>);" data-aos="fade" data-stellar-background-ratio="0.5">
         <div class="container">
             <div class="row align-items-center justify-content-center text-center">
                 <div class="col-md-10">
