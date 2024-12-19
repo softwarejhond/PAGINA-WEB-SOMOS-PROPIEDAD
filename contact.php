@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  <?php include './controllers/head.php' ?>
-    
+  <?php 
+    include './controllers/conexion.php';
+  include './controllers/head.php'; 
+  ?>
   </head>
   <body>
-  
   <div class="site-loader"></div>
-  
   <div class="site-wrap">
-
     <div class="site-mobile-menu">
       <div class="site-mobile-menu-header">
         <div class="site-mobile-menu-close mt-3">
@@ -18,9 +17,7 @@
       </div>
       <div class="site-mobile-menu-body"></div>
     </div> <!-- .site-mobile-menu -->
-
     <?php include './controllers/navBar.php' ?>
-
     <div class="site-blocks-cover inner-page-cover overlay" style="background-image: url(images/hero_bg_2.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
       <div class="container">
         <div class="row align-items-center justify-content-center text-center">
@@ -30,14 +27,11 @@
         </div>
       </div>
     </div>
-    
     <div class="site-section">
       <div class="container">
         <div class="row">
           <div class="col-md-12 col-lg-8 mb-5">
-          
             <form action="#" class="p-5 bg-white border" style="border-radius: 10px;">
-
               <div class="row form-group">
                 <div class="col-md-12 mb-3 mb-md-0">
                   <label class="font-weight-bold" for="fullname">Nombre Completo</label>
@@ -56,25 +50,19 @@
                   <input type="text" id="subject" class="form-control" placeholder="Insertar Asunto">
                 </div>
               </div>
-              
-
               <div class="row form-group">
                 <div class="col-md-12">
                   <label class="font-weight-bold" for="message">Mensaje</label> 
                   <textarea name="message" id="message" cols="30" rows="5" class="form-control" placeholder="Mensaje"></textarea>
                 </div>
               </div>
-
               <div class="row form-group">
                 <div class="col-md-12">
                   <input type="submit" value="Enviar Mensaje" class="btn btn-primary  py-2 px-4 rounded-2">
                 </div>
               </div>
-
-  
             </form>
           </div>
-
           <div class="col-lg-4">
             <div class="p-4 mb-3 bg-white">
               <h3 class="h6 text-black mb-3 text-uppercase">información de Contacto</h3>
@@ -95,7 +83,6 @@
         </div>
       </div>
     </div>
-
     
     <?php 
     include './controllers/agents.php';
