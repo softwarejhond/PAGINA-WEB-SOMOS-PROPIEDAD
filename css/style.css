@@ -25,7 +25,9 @@ iframe {
 .btn-primary{
   border-radius: 10px;
 }
-
+.img-fluid{
+  border-radius: 5px;
+}
 /* CHANGE STYLES BOOSTRAP */
 
 /* NEW STYLES */
