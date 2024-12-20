@@ -9,67 +9,88 @@
             </div>
         </div>
         <div class="row">
-
             <div class="col-md-6 col-lg-4 mb-5 mb-lg-5">
                 <div class="team-member">
-
-                    <img src="images/person_4.jpg" alt="Image" class="img-fluid rounded mb-4">
-
+                    <img src="images/agents/agent_1.jpeg" alt="Image" class="img-fluid rounded mb-4">
                     <div class="text">
-
-                        <h2 class="mb-2 font-weight-light text-black h4">Steven Ericson</h2>
-                        <span class="d-block mb-3 text-white-opacity-05">Agente Inmobiliario</span>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates sed qui at harum ipsum earum voluptas a unde error sapiente, sint perspiciatis, fugiat neque iure rerum repellendus tempora odio doloribus.</p>
-                        <p>
-                            <a href="#" class="text-black p-2"><span class="icon-facebook"></span></a>
-                            <a href="#" class="text-black p-2"><span class="icon-whatsapp"></span></a>
-                            <a href="#" class="text-black p-2"><span class="icon-linkedin"></span></a>
-                        </p>
+                        <p>Control bancario, pagos diarios a propietarios y proveedores, conciliaciones bancarias, apoyo contable.</p>
                     </div>
-
                 </div>
+                <hr>
             </div>
-
             <div class="col-md-6 col-lg-4 mb-5 mb-lg-5">
                 <div class="team-member">
-
-                    <img src="images/person_5.jpg" alt="Image" class="img-fluid rounded mb-4">
-
+                    <img src="images/agents/agent_2.jpeg" alt="Image" class="img-fluid rounded mb-4">
                     <div class="text">
-
-                        <h2 class="mb-2 font-weight-light text-black h4">Nathan Dumlao</h2>
-                        <span class="d-block mb-3 text-white-opacity-05">Agente Inmobiliario</span>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo nobis commodi rerum dicta, nulla. Delectus neque hic deserunt consequuntur esse facere, necessitatibus corrupti! Blanditiis ratione consequuntur beatae adipisci, voluptatum consequatur.</p>
-                        <p>
-                            <a href="#" class="text-black p-2"><span class="icon-facebook"></span></a>
-                            <a href="#" class="text-black p-2"><span class="icon-whatsapp"></span></a>
-                            <a href="#" class="text-black p-2"><span class="icon-linkedin"></span></a>
-                        </p>
+                        <p>Promoción y colocación de inmuebles, inventarios, captación de inmuebles, funciones de apoyo administrativo, promoción y venta de propiedades.</p>
                     </div>
-
                 </div>
+                <hr>
             </div>
-
             <div class="col-md-6 col-lg-4 mb-5 mb-lg-5">
                 <div class="team-member">
-
-                    <img src="images/person_2.jpg" alt="Image" class="img-fluid rounded mb-4">
-
+                    <img src="images/agents/agent_3.jpeg" alt="Image" class="img-fluid rounded mb-4">
                     <div class="text">
-
-                        <h2 class="mb-2 font-weight-light text-black h4">Brooke Cagle</h2>
-                        <span class="d-block mb-3 text-white-opacity-05">Agente Inmobiliario</span>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa nam tenetur molestiae maiores officiis consectetur, distinctio aperiam in illum praesentium corrupti, harum porro reiciendis magnam non enim dolorem aut explicabo.</p>
-                        <p>
-                            <a href="#" class="text-black p-2"><span class="icon-facebook"></span></a>
-                            <a href="#" class="text-black p-2"><span class="icon-whatsapp"></span></a>
-                            <a href="#" class="text-black p-2"><span class="icon-linkedin"></span></a>
-                        </p>
+                        <p>Apoya al proceso contable de la compañía, control de pago de obligaciones tributarias, elaboración de informes contables, elaboración de informes financieros, control de facturación, pago de nómina, manejo de caja menor y apoyo administrativo en labores de gestión humana.</p>
                     </div>
-
                 </div>
+                <hr>
             </div>
-
+            <div class="col-md-6 col-lg-4 mb-5 mb-lg-5">
+                <div class="team-member">
+                    <img src="images/agents/agent_4.jpeg" alt="Image" class="img-fluid rounded mb-4">
+                    <div class="text">
+                        <p>Elaboración de estudios con la aseguradora, elaboración de contratos de arrendamiento y de mandato, programación de entrega de inmuebles, asesoría en la elaboración de contratos, asesoría en el arrendamiento de inmuebles, promoción y colocación de inmuebles.</p>
+                    </div>
+                </div>
+                <hr>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-5 mb-lg-5">
+                <div class="team-member">
+                    <img src="images/agents/agent_5.jpeg" alt="Image" class="img-fluid rounded mb-4">
+                    <div class="text">
+                        <p>Dirección general de la compañía, relacionamiento con proveedores, clientes, aseguradoras, autoridades, entes de control, solución de conflictos, atención de requerimientos legales, atención al cliente y elaboración de avalúos certificados por la ANA y la Lonja de propiedad raíz de Medellín.</p>
+                    </div>
+                </div>
+                <hr>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-5 mb-lg-5">
+                <div class="team-member">
+                    <img src="images/agents/agent_6.jpeg" alt="Image" class="img-fluid rounded mb-4">
+                    <div class="text">
+                        <p>Coordina la entrega de propiedades, controla el pago de servicios públicos, controla el pago de administraciones, prediales y todo tipo de rubros que se originen derivados del contrato de arrendamientos, cierre de contratos, manejo de incrementos, control de empalmes y apoyo administrativo.</p>
+                    </div>
+                </div>
+                <hr>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-5 mb-lg-5">
+                <div class="team-member">
+                    <img src="images/agents/agent_7.jpeg" alt="Image" class="img-fluid rounded mb-4">
+                    <div class="text">
+                        <p>Promoción y colocación de inmuebles, inventarios, captación de inmuebles y funciones de apoyo administrativo.</p>
+                    </div>
+                </div>
+                <hr>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-5 mb-lg-5">
+                <div class="team-member">
+                    <img src="images/agents/agent_8.jpeg" alt="Image" class="img-fluid rounded mb-4">
+                    <div class="text">
+                        <p>Manejo y control de la cartera del grupo de clientes, control de pagos y moras, relacionamiento con la aseguradora para las conciliaciones de siniestros, cobro y gestión de cartera pendiente.</p>
+                    </div>
+                </div>
+                <hr>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-5 mb-lg-5">
+                <div class="team-member">
+                    <img src="images/agents/agent_9.jpeg" alt="Image" class="img-fluid rounded mb-4">
+                    <div class="text">
+                        <p>atención a todos los requerimientos sobre daños y mejoras en los inmuebles y pendientes por inventarios.</p>
+                    </div>
+                </div>
+                <hr>
+            </div>
+            
         </div>
     </div>
 </div>

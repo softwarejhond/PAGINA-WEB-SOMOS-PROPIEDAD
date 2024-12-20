@@ -2,16 +2,14 @@
 <html lang="en">
 
 <head>
-  <?php include './controllers/head.php' ?>
-
+  <?php 
+    include './controllers/conexion.php';
+  include './controllers/head.php'; 
+  ?>
 </head>
-
 <body>
-
   <div class="site-loader"></div>
-
   <div class="site-wrap">
-
     <div class="site-mobile-menu">
       <div class="site-mobile-menu-header">
         <div class="site-mobile-menu-close mt-3">
@@ -20,9 +18,7 @@
       </div>
       <div class="site-mobile-menu-body"></div>
     </div> <!-- .site-mobile-menu -->
-
     <?php include './controllers/navBar.php' ?>
-
     <div class="site-blocks-cover inner-page-cover overlay" style="background-image: url(images/hero_bg_2.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
       <div class="container">
         <div class="row align-items-center justify-content-center text-center">
@@ -47,7 +43,6 @@
         </div>
       </div>
     </div>
-
     <div class="site-section">
       <div class="container">
         <div class="row mb-5 justify-content-center" data-aos="fade-up">
@@ -74,17 +69,13 @@
         </div>
       </div>
     </div>
-
     <?php
     include './controllers/agents.php';
     include './controllers/questions.php';
     include './controllers/footer.php';
     ?>
-
   </div>
-
   <?php include './controllers/scripts.php' ?>
-
 </body>
 
 </html>
