@@ -31,50 +31,22 @@ iframe {
 .navbar>div {
   width: 100%;
 }
-.nav-link{
+.site-mobile-menu .site-nav-wrap li.nav-item.active>a {
+  color: var(--color-primary);
+}
+.site-mobile-menu .site-nav-wrap .nav-item a:hover  {
+  color: var(--color-primary);
+}
+.site-mobile-menu .site-nav-wrap .dropdown-menu a:hover  {
   color: white;
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-.show .nav-link:hover{
-  color: var(--color-primary);
-}
-.navbar-collapse.show .navbar-nav{
-  padding: 1rem 0;
-  color: var(--color-primary);
-  border-radius: 1rem;
-  background-color: #f9f9f9;
-}
-.navbar-collapse.show .navbar-nav .nav-link{
-  color: var(--color-primary);
-  padding: 5px 1rem;
-}
-.navbar-collapse.show .navbar-nav a:hover{
-  background-color: var(--color-primary);
-  color: white;
-}
-.active>a {
-  color: var(--color-primary);
-}
-.navbar-collapse.show .dropdown-menu{
-  margin: 0 1rem;
 }
 .dropdown-item:hover{
   background-color: var(--color-primary-hover);
   color: white;
 }
-.navbar .navbar-toggler{
-  border-color: white;
-  color: white;
-  font-size: 2rem;
-  height: fit-content;
-  width: fit-content;
-}
-.navbar .navbar-toggler:hover, .navbar .navbar-toggler:focus{
-  color: var(--color-primary);
-  border-color: var(--color-primary);
-  outline: 5px auto var(--color-primary)
+.navbar-nav .dropdown-menu {
+  position: absolute;
+  top: 50px;
 }
 /* CHANGE STYLES BOOSTRAP */
 
