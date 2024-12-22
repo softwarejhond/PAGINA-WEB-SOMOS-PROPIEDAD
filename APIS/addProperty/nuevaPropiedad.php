@@ -399,7 +399,7 @@ $fieldsPerStep = 10; // Número de campos por paso (5 por cada columna)
                 echo "<label  class='form-label text-magenta-dark'>" . ucfirst(str_replace('_', ' ', $fieldName)) . "</label>";
 
                 // Lista de opciones para la cocina
-                $cocina = ['Integral', 'Semi-integral', 'Enchapada', 'Básica', 'o aplica']; // Opciones de cocina
+                $cocina = ['Integral', 'Semi-integral', 'Enchapada', 'Básica', 'No aplica']; // Opciones de cocina
                 foreach ($cocina as $value) {
                     echo "<div class='form-check-inline'>";
                     echo "<input type='radio' class='form-check-input' name='$fieldName' id='cocina_$value' value='$value' required>";
@@ -686,12 +686,9 @@ $fieldsPerStep = 10; // Número de campos por paso (5 por cada columna)
                 echo "<label for='$fieldName' class='form-label text-magenta-dark'>" . ucfirst(str_replace('_', ' ', 'Estado del Propietario')) . "</label>";
 
                 // Select para estado propietario
-                echo "<select id='$fieldName' name='$fieldName' class='form-control' required>";
-                echo "<option value=''>Seleccione el estado</option>"; // Opción vacía por defecto
-                echo "<option value='EN VENTA'>EN VENTA</option>";
-                echo "<option value='EN ALQUILER'>EN ALQUILER</option>";
-                echo "<option value='EN VENTA O ALQUILER'>EN VENTA O ALQUILER</option>";
-                echo "</select>";
+                echo "<inpu id='$fieldName' name='$fieldName' class='form-control' required>";
+                echo "<option value='NUEVO'>NUEVO</option>"; // Opción vacía por defecto
+               echo "</inpu>";
 
                 echo "</div>";
             } else {
@@ -713,7 +710,7 @@ $fieldsPerStep = 10; // Número de campos por paso (5 por cada columna)
         <!-- Botones de navegación -->
         <div class="form-navigation">
             <button type="button" class="btn btn-secondary  py-2 px-4 rounded-2" id="prevBtn" style="display:none;"><i class="bi bi-chevron-double-left"></i> Anterior</button>
-            <button type="button" class="btn btn-primary  py-2 px-4 rounded-2" id="nextBtn">Siguiente <i class="bi bi-chevron-double-right"></i></button>
+            <button type="button" class="btn bg-indigo text-white py-2 px-4 rounded-2" id="nextBtn">Siguiente <i class="bi bi-chevron-double-right"></i></button>
             <!-- Botón de enviar -->
 
         </div>
