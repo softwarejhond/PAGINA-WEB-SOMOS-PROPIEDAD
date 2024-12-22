@@ -30,7 +30,7 @@
     <div class="site-section">
       <div class="container">
         <div class="row">
-          <div class="col-md-12 col-lg-8 mb-5">
+          <div class="col-md-12 col-lg-6 mb-5">
             <form action="#" class="p-5 bg-white border" style="border-radius: 10px;">
               <div class="row form-group">
                 <div class="col-md-12 mb-3 mb-md-0">
@@ -63,12 +63,12 @@
               </div>
             </form>
           </div>
-          <div class="col-lg-4">
+          <div class="col-lg-6">
             <div class="p-4 mb-3 bg-white">
               <h3 class="h6 text-black mb-3 text-uppercase">información de Contacto</h3>
               <p class="mb-0 font-weight-bold">Dirección</p>
               <p class="mb-4">Calle 73 Sur N° 45A-60 Local 9, Sabaneta, Antioquia</p>
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.8475448317326!2d-75.62024242600957!3d6.151166527380218!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e4683df17f5bf79%3A0xf7a0bfc659f59cb5!2sSomos%20Propiedad%20Inmobiliaria!5e0!3m2!1ses!2sco!4v1732509769267!5m2!1ses!2sco" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.8475448317326!2d-75.62024242600957!3d6.151166527380218!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e4683df17f5bf79%3A0xf7a0bfc659f59cb5!2sSomos%20Propiedad%20Inmobiliaria!5e0!3m2!1ses!2sco!4v1732509769267!5m2!1ses!2sco"  style="border:0; height:200px" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
               <p class="mb-0 font-weight-bold">Teléfonos</p>
               <p class="mb-4"><a href="#">(604) 444 73 62</a></p>
