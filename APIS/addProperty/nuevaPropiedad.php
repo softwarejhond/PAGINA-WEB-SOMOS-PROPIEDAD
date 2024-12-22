@@ -712,8 +712,8 @@ $fieldsPerStep = 10; // Número de campos por paso (5 por cada columna)
 
         <!-- Botones de navegación -->
         <div class="form-navigation">
-            <button type="button" class="btn bg-indigo-dark text-white" id="prevBtn" style="display:none;"><i class="bi bi-chevron-double-left"></i> Anterior</button>
-            <button type="button" class="btn bg-magenta-dark text-white" id="nextBtn">Siguiente <i class="bi bi-chevron-double-right"></i></button>
+            <button type="button" class="btn btn-secondary  py-2 px-4 rounded-2" id="prevBtn" style="display:none;"><i class="bi bi-chevron-double-left"></i> Anterior</button>
+            <button type="button" class="btn btn-primary  py-2 px-4 rounded-2" id="nextBtn">Siguiente <i class="bi bi-chevron-double-right"></i></button>
             <!-- Botón de enviar -->
 
         </div>
