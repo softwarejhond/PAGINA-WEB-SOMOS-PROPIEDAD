@@ -39,7 +39,6 @@ return [
         'fecha',
         'contrato_EPM',
         'url_foto_principal',
-        'condicion',
     ],
 
     'tipoInmueble' => [

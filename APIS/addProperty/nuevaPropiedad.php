@@ -126,7 +126,7 @@ $fieldsPerStep = 10; // Número de campos por paso (5 por cada columna)
         $ruta1 = '';
         if (isset($_FILES['url_foto_principal']) && $_FILES['url_foto_principal']['error'] == 0) {
             $ruta1 =  basename($_FILES['url_foto_principal']['name']);
-            move_uploaded_file($_FILES['url_foto_principal']['tmp_name'], 'fotos/'.$ruta1);
+            move_uploaded_file($_FILES['url_foto_principal']['tmp_name'], 'admin/fotos/'.$ruta1);
         }
 
         // Verificar si la propiedad ya existe
@@ -146,13 +146,13 @@ $fieldsPerStep = 10; // Número de campos por paso (5 por cada columna)
             codigo, tipoInmueble, nivel_piso, area, estrato, departamento, Municipio, terraza, ascensor, patio, parqueadero, cuarto_util, alcobas,
             closet, sala, sala_comedor, comedor, cocina, servicios, CuartoServicios, ZonaRopa, vista, servicios_publicos, otras_caracteristicas, direccion, latitud, longitud,
             TelefonoInmueble, valor_canon, doc_propietario, nombre_propietario, telefono_propietario, email_propietario, banco, tipoCuenta, numeroCuenta, diaPago,
-            fecha, contrato_EPM, url_foto_principal, condicion, fecha_creacion
+            fecha, contrato_EPM,estadoPropietario, url_foto_principal, condicion, fecha_creacion
         ) VALUES (
             '$codigo', '$tipoInmueble', '$nivel_piso', '$area', '$estrato', '$departamento', '$municipios', '$terraza', '$ascensor', '$patio', '$parqueadero',
             '$cuarto_util', '$habitaciones', '$closet', '$sala', '$sala_comedor', '$comedor', '$cocina', '$servicios', '$cuartoServicios', '$zonaRopa', '$vista',
             '$servicios_publicos', '$otras_caracteristicas', '$direccion', '$latitud','$longitud', '$telefonoInmueble', '$valor_canon', '$doc_propietario', '$nombre_propietario', 
-            '$telefono_propietario', '$email_propietario', '$banco', '$tipoCuenta', '$numeroCuenta', '$diaPago', '$fecha', '$contrato_EPM', '$ruta1', 
-            '$condicion', NOW()
+            '$telefono_propietario', '$email_propietario', '$banco', '$tipoCuenta', '$numeroCuenta', '$diaPago', '$fecha', '$contrato_EPM','NUEVO', '$ruta1', 
+            'NUEVO', NOW()
         )";
 
             if ($conn->query($queryInsert) === TRUE) {
