@@ -47,7 +47,7 @@
         ?>
 
     </div>
-
+    <script type="text/javascript" src="js/departamentos_municipios_barrios.js"></script> 
     <?php include './controllers/scripts.php' ?>
 
 </body>

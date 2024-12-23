@@ -772,7 +772,7 @@ $fieldsPerStep = 10; // Número de campos por paso (5 por cada columna)
     // Inicializar el primer paso al cargar la página
     showStep();
 </script>
-
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- jQuery muy importante para mostar los departamentos y municipios -->
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA98OpvjlfBwdRXdIVsGCyNM2ak5o-WYYs&libraries=places&callback=initAutocomplete" async defer></script>
 
 <script>
