@@ -146,6 +146,12 @@ iframe {
   border-radius: 5px;
 }
 /* CHANGE STYLES BOOSTRAP */
+a{
+  text-decoration: none;
+}
+.accordion-item{
+  border: none;
+}
 .btn-primary{
   border-radius: 10px;
 }
