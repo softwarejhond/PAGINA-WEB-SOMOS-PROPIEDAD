@@ -55,7 +55,7 @@ while ($empresaLog = mysqli_fetch_array($queryCompany)) {
 }
  ?>
 <br>
-<b class="text-white">&copy; Copyright <?php echo date("Y"); ?> Todos los derechos de uso para <label class="text-lime-dark"><b><?php echo $empresa ?> </b></label><br>
+<b class="text-white">&copy; Copyright <?php echo date("Y"); ?> Todos los derechos de uso para <label class="text-magenta-dark"><b><?php echo $empresa ?> </b></label><br>
 Made by <a class="text-light" href="https://agenciaeaglesoftware.com/" target="_blank">Agencia de Desarrollo Eagle Software</a>
             </div>
 
