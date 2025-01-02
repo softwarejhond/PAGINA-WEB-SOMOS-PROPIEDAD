@@ -71,7 +71,6 @@
     </div>
     <?php
     include './controllers/agents.php';
-    include './controllers/questions.php';
     include './controllers/footer.php';
     ?>
   </div>
