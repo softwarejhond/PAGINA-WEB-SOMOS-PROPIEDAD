@@ -90,7 +90,6 @@
       </div>
     </main>
     <?php
-    include './controllers/questions.php';
     include './controllers/footer.php';
     ?>
 

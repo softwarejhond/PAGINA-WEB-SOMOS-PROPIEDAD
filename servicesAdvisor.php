@@ -88,11 +88,119 @@
         </div>
       </div>
     </main>
+    <div class="site-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5">
+          <div class="col-md-7 text-center">
+            <div class="site-section-title">
+              <h2>Preguntas Frecuentes</h2>
+            </div>
+            <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis maiores quisquam saepe architecto error corporis aliquam. Cum ipsam a consectetur aut sunt sint animi, pariatur corporis, eaque, deleniti cupiditate officia.</p> -->
+          </div>
+        </div>
 
-    <?php
-    include './controllers/questions.php';
-    include './controllers/footer.php';
-    ?>
+        <div class="row justify-content-center" data-aos="fade" data-aos-delay="100">
+          <div class="col-md-8">
+            <div class="accordion unit-8" id="accordion">
+              <div class="accordion-item">
+                <h3 class="mb-0 heading">
+                  <a class="btn-block" data-toggle="collapse" href="#collapseOne" role="button" aria-expanded="true" aria-controls="collapseOne">¿Se requiere seguro para arrendar una propiedad?<span class="icon"></span></a>
+                </h3>
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                  <div class="body-text">
+                    <p>No, La Inmobiliaria se encarga de gestionar el seguro de arrendamiento para todos los inmuebles que administra.</p>
+                  </div>
+                </div>
+              </div> <!-- .accordion-item -->
+
+              <div class="accordion-item">
+                <h3 class="mb-0 heading">
+                  <a class="btn-block" data-toggle="collapse" href="#collapseTwo" role="button" aria-expanded="false" aria-controls="collapseTwo">¿Puedo cambiar la cerradura de la propiedad?<span class="icon"></span></a>
+                </h3>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                  <div class="body-text">
+                    <p>No puedes cambiar la cerradura sin permiso del arrendador. Si es necesario por razones de seguridad, debes informarlo por escrito. Lo que sí está permitido es cambiar las claves de las cerraduras principales por motivos de seguridad.</p>
+                  </div>
+                </div>
+              </div> <!-- .accordion-item -->
+
+              <div class="accordion-item">
+                <h3 class="mb-0 heading">
+                  <a class="btn-block" data-toggle="collapse" href="#collapseThree" role="button" aria-expanded="false" aria-controls="collapseThree">¿El arrendador puede subir el precio de la renta durante el contrato?<span class="icon"></span></a>
+                </h3>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                  <div class="body-text">
+                    <p>Los contratos de arrendamiento tienen incrementos anuales de acuerdo con la ley 820 de 2003. O sea, el incremento se hace cada que el contrato cumpla un año, el monto del incremento es el autorizado por el gobierno que normalmente es el IPC (Índice de precios al Consumidor) del año inmediatamente anterior.</p>
+                  </div>
+                </div>
+              </div> <!-- .accordion-item -->
+
+              <div class="accordion-item">
+                <h3 class="mb-0 heading">
+                  <a class="btn-block" data-toggle="collapse" href="#collapseFour" role="button" aria-expanded="false" aria-controls="collapseFour">¿Qué sucede si no se realiza un inventario de la propiedad al inicio del arrendamiento?<span class="icon"></span></a>
+                </h3>
+                <div id="collapseFour" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                  <div class="body-text">
+                    <p>El inventario inicial es un requisito indispensable para entregar un inmueble ya que este valida el estado del inmueble que se está entregando y es la guía para entregar el inmueble a la inmobiliaria cuando el contrato se termine.</p>
+                  </div>
+                </div>
+              </div> <!-- .accordion-item -->
+              <div class="accordion-item">
+                <h3 class="mb-0 heading">
+                  <a class="btn-block" data-toggle="collapse" href="#collapseFive" role="button" aria-expanded="false" aria-controls="collapseFive">¿Qué sucede si tengo una disputa con el arrendador?<span class="icon"></span></a>
+                </h3>
+                <div id="collapseFive" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                  <div class="body-text">
+                    <p>En caso de una disputa, lo mejor es tratar de resolverla de manera amigable. Si no es posible, puedes recurrir a los mecanismos legales o de mediación que estén establecidos en tu contrato o por la ley, Personería, secretaría de Gobierno o Centros de conciliación de las administraciones locales.</p>
+                  </div>
+                </div>
+              </div> <!-- .accordion-item -->
+              <div class="accordion-item">
+                <h3 class="mb-0 heading">
+                  <a class="btn-block" data-toggle="collapse" href="#collapseSix" role="button" aria-expanded="false" aria-controls="collapseSix">¿Qué debo hacer si la propiedad tiene plagas o insectos?<span class="icon"></span></a>
+                </h3>
+                <div id="collapseSix" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                  <div class="body-text">
+                    <p>Debes informar al arrendador de inmediato. El arrendador es responsable de contratar servicios de exterminio, a menos que el problema haya sido causado por el inquilino.</p>
+                  </div>
+                </div>
+              </div> <!-- .accordion-item -->
+              <div class="accordion-item">
+                <h3 class="mb-0 heading">
+                  <a class="btn-block" data-toggle="collapse" href="#collapseSeven" role="button" aria-expanded="false" aria-controls="collapseSeven">¿Cómo puedo renovar mi contrato de arrendamiento?<span class="icon"></span></a>
+                </h3>
+                <div id="collapseSeven" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                  <div class="body-text">
+                    <p>El contrato se renueva automáticamente salvo cuando el inquilino manifiesta la intención de no renovación que debe ser enviada por escrito a la inmobiliaria con tres meses de anticipación según la exige la ley 820 de 2003.</p>
+                  </div>
+                </div>
+              </div> <!-- .accordion-item -->
+              <div class="accordion-item">
+                <h3 class="mb-0 heading">
+                  <a class="btn-block" data-toggle="collapse" href="#collapseEigth" role="button" aria-expanded="false" aria-controls="collapseEigth">¿Cómo puedo cancelar el contrato si me mudo antes de tiempo?<span class="icon"></span></a>
+                </h3>
+                <div id="collapseEigth" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                  <div class="body-text">
+                    <p>Para cancelar el contrato antes de tiempo, debes informar al arrendador con el tiempo estipulado en el contrato (3 meses de anticipación), pagar la penalidad (Tres cánones mensuales), servicios públicos al día y se debe agendar cita para realizar el inventario de entrega.</p>
+                  </div>
+                </div>
+              </div> <!-- .accordion-item -->
+              <div class="accordion-item">
+                <h3 class="mb-0 heading">
+                  <a class="btn-block" data-toggle="collapse" href="#collapseNine" role="button" aria-expanded="false" aria-controls="collapseNine">¿Cómo se calcula el aumento en la renta al renovar el contrato?<span class="icon"></span></a>
+                </h3>
+                <div id="collapseNine" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                  <div class="body-text">
+                    <p>El IPC (Índice de precios del Consumidor) es la herramienta definida por ley para los incrementos del canon de arrendamiento, salvo cuando se trata de locales comerciales que regularmente se pacta cada año.</p>
+                  </div>
+                </div>
+              </div> <!-- .accordion-item -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <?php include './controllers/footer.php';?>
 
   </div>
 
