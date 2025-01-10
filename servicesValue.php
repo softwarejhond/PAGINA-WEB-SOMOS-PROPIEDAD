@@ -89,6 +89,7 @@
         </div>
       </div>
     </main>
+    
     <?php
     include './controllers/footer.php';
     ?>
