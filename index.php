@@ -153,28 +153,7 @@
     <?php include './controllers/footer.php';?>
 
   </div>
-<!-- Modal -->
-<div class="modal fade" id="miModal" tabindex="-1" aria-labelledby="miModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title text-black" id="miModalLabel">Bienvenido</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body text-black">
-      Este sitio web está en proceso de remodelación. Para obtener información sobre nuestra inmobiliaria, no dudes en contactarnos a través de nuestras líneas de WhatsApp ubicadas en la esquina inferior derecha. 
-      <br>¡Gracias por tu comprensión!
-      </div>
- 
-    </div>
-  </div>
-</div>
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    var miModal = new bootstrap.Modal(document.getElementById('miModal'));
-    miModal.show();
-  });
-</script>
+
 
   <?php include './controllers/scripts.php' ?>
   <script type="text/javascript" src="js/departamentos_municipios_barrios.js?v=1"></script>
