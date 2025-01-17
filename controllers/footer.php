@@ -62,6 +62,4 @@ Made by <a class="text-light" href="https://agenciaeaglesoftware.com/" target="_
         </div>
     </div>
 </footer>
-<aside class="button-floating">
-    <a target="_blank" href="https://wa.link/hmoin4"><span class="icon-whatsapp"></span></a>
-</aside>
+
