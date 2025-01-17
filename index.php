@@ -3,7 +3,9 @@
 
 <head>
   <?php include './controllers/head.php' ?>
-
+  <style>
+ 
+  </style>
 </head>
 
 <body>
@@ -27,7 +29,7 @@
     include './APIS/cardFilter.php';
     ?>
 
-    <?php include './controllers/chooseUs.php';?>
+    <?php include './controllers/chooseUs.php'; ?>
     <div class="site-section">
       <div class="container">
         <div class="row justify-content-center mb-5">
@@ -48,7 +50,7 @@
                 </h3>
                 <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
                   <div class="body-text">
-                    <p>Debes contactar a la inmobiliaria de inmediato. El un número de reparaciones es: 3006662367 o 6044447362 Ext 108 o correo electrónico reparaciones@somospropiedad.com  para estos casos.</p>
+                    <p>Debes contactar a la inmobiliaria de inmediato. El un número de reparaciones es: 3006662367 o 6044447362 Ext 108 o correo electrónico reparaciones@somospropiedad.com para estos casos.</p>
                   </div>
                 </div>
               </div> <!-- .accordion-item -->
@@ -111,7 +113,7 @@
                 </h3>
                 <div id="collapseSeven" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
                   <div class="body-text">
-                    <p>El arrendador es responsable de reparar daños estructurales o problemas no causados por el inquilino. Debes reportarlo inmediatamente.  A estos a este contacto 3006662367 o 6044447362 Ext 108 o correo electrónico reparaciones@somospropiedad.com  para estos casos.</p>
+                    <p>El arrendador es responsable de reparar daños estructurales o problemas no causados por el inquilino. Debes reportarlo inmediatamente. A estos a este contacto 3006662367 o 6044447362 Ext 108 o correo electrónico reparaciones@somospropiedad.com para estos casos.</p>
                   </div>
                 </div>
               </div> <!-- .accordion-item -->
@@ -150,14 +152,14 @@
         </div>
       </div>
     </div>
-    <?php include './controllers/footer.php';?>
+    <?php include './controllers/footer.php'; ?>
 
   </div>
 
 
   <?php include './controllers/scripts.php' ?>
   <script type="text/javascript" src="js/departamentos_municipios_barrios.js?v=1"></script>
-   
+
 </body>
 
 </html>
