@@ -5,7 +5,7 @@ require('conexion.php');
 $buscar = isset($_GET['buscar']) ? $conn->real_escape_string($_GET['buscar']) : '';
 
 // Definir el número de ítems por página
-define('NUM_ITEMS_BY_PAGE', 4);
+define('NUM_ITEMS_BY_PAGE', 12);
 
 // Consulta para contar el total de productos
 $sql_count = "SELECT COUNT(*) as total_products 
@@ -317,7 +317,6 @@ $canonFormateado = number_format($row['valor_canon'], 0, ',', '.');
             .catch(error => console.error('Error fetching data:', error));
     }
 
-
     function renderResults(data) {
         resultsContainer.innerHTML = '';
 
@@ -329,160 +328,161 @@ $canonFormateado = number_format($row['valor_canon'], 0, ',', '.');
         const cardContainer = document.createElement('div');
         cardContainer.classList.add('row', 'justify-content-center');
 
-        data.forEach(item => {
+        // Iterar sobre los datos y crear las tarjetas en columnas de 3
+        data.forEach((item, index) => {
+            // Crear columna
             const cardCol = document.createElement('div');
-            cardCol.classList.add('col-md-12', 'col-lg-12', 'col-sm-12', 'mb-1');
+            cardCol.classList.add('col-md-6', 'col-lg-4', 'col-sm-12', 'mb-3');
 
+            // Crear tarjeta
             const card = document.createElement('div');
+            card.classList.add('card', 'h-100');
 
-            // Aplicar formato al valor del canon
+            // Formatear el valor del canon
             const valorCanonFormatted = new Intl.NumberFormat('es-CO').format(item.valor_canon);
 
+            // Contenido de la tarjeta
             const cardContent = `
-            <div class="row mb-4">
-            <div class="col-md-12">
-            <div class="property-entry horizontal d-lg-flex">
-
-              <a href="#" class="property-thumbnail h-50">
-                <div class="offer-type-wrap">
-                  <h6 class="bg-danger text-white rounded p-2"> ${item.condicion}</h6>
+            <div class="card" style="width: 100%;">
+              <!-- Carrusel -->
+              <div id="carousel${item.codigo}" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  ${item.fotos.map((foto, index) => {
+                    const rutaImagen = `https://somospropiedad.com/admin/fotos/${item.codigo}/${foto}`;
+                    return `
+                      <div class="carousel-item ${index === 0 ? 'active' : ''}">
+                        <img src="${rutaImagen}" class="d-block w-100" alt="Foto de la propiedad" style="height:400px;" onerror="this.onerror=null; this.src='ruta_a_imagen_defecto.jpg';">
+                      </div>
+                    `;
+                  }).join('')}
                 </div>
-                <img src="https://somospropiedad.com/admin/fotos/${item.url_foto_principal}" alt="Image" class="img-fluid">
-              </a>
-
-              <div class="p-4 property-body">
-                <h2 class="property-title"><a href="#">${item.tipoInmueble} - ${item.codigo}</a></h2>
-                <span class="property-location d-block mb-3"><span class="property-icon icon-room"></span> ${item.direccion}</span>
-                <strong class="property-price text-primary mb-3 d-block text-success">$ ${valorCanonFormatted}</strong>
-                <ul class="property-specs-wrap mb-3 mb-lg-0">
-                  <li>
-                    <span class="property-specs">Habitaciones</span>
-                    <span class="property-specs-number ">${item.alcobas}</span>
-
-                  </li>
-                  <li>
-                    <span class="property-specs">Baños</span>
-                    <span class="property-specs-number">${item.servicios}</span>
-
-                  </li>
-                  <li>
-                    <span class="property-specs">&nbsp;m&sup2;</span>
-                    <span class="property-specs-number">${item.area}</span>
-
-                  </li>
-                <li>
-                    <span class="property-specs">Parqueadero</span>
-                    <span class="property-specs-number">${item.parqueadero}</span>
-
-                  </li>
-                    <li>
-                    <span class="property-specs">Cocina</span>
-                    <span class="property-specs-number">${item.cocina}</span>
-
-                  </li>
-                  
-                </ul>
-                  <a class="btn btn-primary" data-toggle="collapse" href="#" role="button" aria-expanded="false" aria-controls="collapseExample">Ver detalles </a>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carousel${item.codigo}" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carousel${item.codigo}" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Siguiente</span>
+                </button>
               </div>
-
+              <!-- Fin del Carrusel -->
+              <div class="card-body">
+                <button class="btn bg-amber-dark text-left text-white m-1" type="button">
+                  <span class="spinner-grow spinner-grow-sm text-lime-dark" role="status" aria-hidden="true"></span>
+                  ${item.condicion}
+                </button>
+                <button class="btn bg-teal-dark text-left text-white m-1" type="button" data-bs-toggle="modal" 
+      data-bs-target="#modalInfo${item.codigo}" >
+                  Ver más
+                </button>
+                 <ul class="list-group list-group-flush">
+    <li class="list-group-item"> <h5 class="prop-title text-left text-uppercase text-magenta-dark "><b>${item.tipoInmueble} - ${item.codigo}</b></h5></li>
+    <li class="list-group-item"><i class="bi bi-geo-alt-fill"></i> ${item.direccion}</li>
+    <li class="list-group-item"><i class="bi bi-bar-chart-steps"></i> NIVEL: ${item.nivel_piso}</li>
+     <li class="list-group-item"><i class="bi bi-bounding-box"></i> ÁREA: ${item.area} </li>
+    <li class="list-group-item"><h5 class="text-magenta-dark"><b>$ ${valorCanonFormatted}</b></h5></li>
+  </ul>
+              </div>
             </div>
+<!-- Modal -->
+            <div class="modal fade" id="modalInfo${item.codigo}" tabindex="-1" aria-labelledby="propertyModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="propertyModalLabel">
+          <i class="bi bi-ticket-detailed-fill"></i> Detalles de la Propiedad
+        </h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center" id="propertyDetails${item.codigo}">
+        <div class="row">
+          <div class="col col-lg-4 col-md-4 col-sm-12">
+            <p class="prop-text">
+              <img src="images/icons/bed.png" width="30px" />
+            </p>
+            <p class="prop-text-modal">Alcobas</p>
+            <p class="prop-numb-modal text-magenta-dark">
+              <b>${item.alcobas}</b>
+            </p>
+
+            <p class="prop-text">
+              <img src="images/icons/signage.png" width="30px" />
+            </p>
+            <p class="prop-text-modal">Parqueadero</p>
+            <p class="prop-numb-modal text-magenta-dark">
+              <b>${item.parqueadero}</b>
+            </p>
+
+            <p class="prop-text">
+              <img src="images/icons/patio.png" width="30px" />
+            </p>
+            <p class="prop-text-modal">Patio</p>
+            <p class="prop-numb-modal text-magenta-dark">
+              <b>${item.patio}</b>
+            </p>
+          </div>
+          <div class="col col-md-4">
+            <p class="prop-text">
+              <img src="images/icons/toilet.png" width="30px" />
+            </p>
+            <p class="prop-text-modal">Baños</p>
+            <p class="prop-numb-modal text-magenta-dark">
+              <b>${item.servicios}</b>
+            </p>
+            <p class="prop-text">
+              <img src="images/icons/area.png" width="30px" />
+            </p>
+            <p class="prop-text-modal">Área</p>
+            <p class="prop-numb-modal text-magenta-dark">
+              <b>${item.area} m²</b>
+            </p>
+            <p class="prop-text">
+              <img src="images/icons/elevator.png" width="30px" />
+            </p>
+            <p class="prop-text-modal">Ascensor</p>
+            <p class="prop-numb-modal text-magenta-dark">
+              <b>${item.ascensor}</b>
+            </p>
+          </div>
+          <div class="col col-md-4">
+            <p class="prop-text">
+              <img src="images/icons/kitchen.png" width="30px" />
+            </p>
+            <p class="prop-text-modal">Cocina</p>
+            <p class="prop-numb-modal text-magenta-dark">
+              <b>${item.cocina}</b>
+            </p>
+            <p class="prop-text">
+              <img src="images/icons/level.png" width="30px" />
+            </p>
+            <p class="prop-text-modal">Nivel</p>
+            <p class="prop-numb-modal text-magenta-dark">
+              <b>${item.nivel_piso}</b>
+            </p>
+            <p class="prop-text">
+              <img src="images/icons/closet.png" width="30px" />
+            </p>
+            <p class="prop-text-modal">Closets</p>
+            <p class="prop-numb-modal text-magenta-dark">
+              <b>${item.closet}</b>
+            </p>
           </div>
         </div>
-
-<div class="modal fade" id="modalInfo${item.codigo}" tabindex="-1" aria-labelledby="propertyModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="propertyModalLabel"><i class="bi bi-ticket-detailed-fill"></i> Detalles de la Propiedad</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body" id="propertyDetails${item.codigo}">
-              <div class="row">
-                      <div class="col col-lg-4 col-md-4 col-sm-12">
-                            <p class="prop-text">
-                                <img src="img/icons/bed.png" width="30px" />
-                            </p>
-                            <p class="prop-text-modal">Alcobas</p>
-                            <p class="prop-numb-modal text-magenta-dark "><b>${item.alcobas}</b></p>
-
-                            <p class="prop-text">
-                                <img src="img/icons/signage.png" width="30px" />
-                            </p>
-                            <p class="prop-text-modal">Parqueadero</p>
-                            <p class="prop-numb-modal text-magenta-dark "><b>${item.parqueadero}</b></p>
-
-                            <p class="prop-text">
-                                <img src="img/icons/patio.png" width="30px" />
-                            </p>
-                            <p class="prop-text-modalt">Patio</p>
-                            <p class="prop-numb-modal text-magenta-dark "><b>${item.patio}</b></p>
-                        </div>
-                        <div class="col col-md-4">
-                            <p class="prop-text">
-                                <img src="img/icons/toilet.png" width="30px" />
-                            </p>
-                            <p class="prop-text-modal">Baños</p>
-                            <p class="prop-numb-modal text-magenta-dark "><b>${item.servicios}</b></p>
-                            <p class="prop-text">
-                                <img src="img/icons/area.png" width="30px" />
-                            </p>
-                            <p class="prop-text-modal">Área</p>
-                            <p class="prop-numb-modal text-magenta-dark "><b>${item.area} m²</b></p>
-                            <p class="prop-text">
-                                <img src="img/icons/elevator.png" width="30px" />
-                            </p>
-                            <p class="prop-text-modal">Ascensor</p>
-                            <p class="prop-numb-modal text-magenta-dark "><b>${item.ascensor}</b></p>
-                        </div>
-                        <div class="col col-md-4">
-                            <p class="prop-text">
-                                <img src="img/icons/kitchen.png" width="30px" />
-                            </p>
-                            <p class="prop-text-modal">Cocina</p>
-                            <p class="prop-numb-modal text-magenta-dark "><b>${item.cocina}</b></p>
-                            <p class="prop-text">
-                                <img src="img/icons/level.png" width="30px" />
-                            </p>
-                            <p class="prop-text-modal">Nivel</p>
-                            <p class="prop-numb-modal text-magenta-dark "><b>${item.nivel_piso}</b></p>
-                            <p class="prop-text">
-                                <img src="img/icons/closet.png" width="30px" />
-                            </p>
-                            <p class="prop-text-modal">Closets</p>
-                            <p class="prop-numb-modal text-magenta-dark "><b>${item.closet}</b></p>
-                        </div>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn bg-magenta-dark text-white" data-bs-dismiss="modal">Cerrar</button>
-            </div>
-        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn bg-magenta-dark text-white" data-bs-dismiss="modal">Cerrar</button>
+      </div>
     </div>
+  </div>
 </div>
-`;
-
-
-            function openPropertyModal(propertyId) {
-                $(`#modalInfo${propertyId}`).modal('show'); // Abre el modal una vez se ha cargado la información
-            }
-
+        `;
 
             card.innerHTML = cardContent;
-            cardCol.appendChild(card);
-            cardContainer.appendChild(cardCol);
-
+            cardCol.appendChild(card); // Agregar tarjeta a la columna
+            cardContainer.appendChild(cardCol); // Agregar columna al contenedor
         });
 
-        resultsContainer.appendChild(cardContainer);
-        resultsContainer.appendChild(cardContainer);
-        // Asignar evento click al botón "Ver más" de cada elemento
-        const viewDetailsBtns = document.querySelectorAll('.view-details-btn');
-        viewDetailsBtns.forEach(btn => {
-            btn.addEventListener('click', function() {
-                const propertyId = this.getAttribute('data-id');
-                openPropertyModal(propertyId);
-            });
-        });
+        resultsContainer.appendChild(cardContainer); // Agregar todo el contenedor al contenedor principal
     }
 
 
