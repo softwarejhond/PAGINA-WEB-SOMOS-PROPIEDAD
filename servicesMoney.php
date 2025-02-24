@@ -26,8 +26,8 @@
 
     <?php include './controllers/navBar.php' ?>
 
-    <div class="site-blocks-cover inner-page-cover overlay" style="background-image: url(images/hero_bg_2.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
-      <div class="container">
+    <div class="site-blocks-cover inner-page-cover overlay" style="background-image: url(images/banner.png);" data-aos="fade" data-stellar-background-ratio="0.2">
+        <div class="container">
         <div class="row align-items-center justify-content-center text-center">
           <div class="col-md-10">
             <h1 class="mb-2">Servicio de Dinero a Interés</h1>
@@ -40,7 +40,7 @@
         <div class="container">
           <div class="row align-items-center">
             <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
-              <img src="images/service_money.jpg" alt="Image" class="img-fluid">
+              <img src="images/dinero.png" alt="Image" class="img-fluid">
             </div>
             <div class="col-md-6 ml-auto" data-aos="fade-up" data-aos-delay="200">
               <p class="lead">En Somos Propiedad agencia de arrendamiento, ofrecemos un servicio de <b>dinero a interés,</b> una solución financiera ideal para aquellos propietarios de bienes raíces o inquilinos que necesiten financiamiento rápido y flexible, garantizando el respaldo de la propiedad. Este servicio permite acceder a capital mediante un préstamo, con un interés acordado, que puede ser utilizado para diversos fines, como mejoras en la propiedad, pago de deudas, inversión en nuevos inmuebles, entre otros.</p>
