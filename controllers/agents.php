@@ -66,6 +66,15 @@
             </div>
             <div class="col-md-6 col-lg-4 mb-5 mb-lg-5">
                 <div class="team-member">
+                    <img src="images/agents/agent_10.10.png" alt="Image" class="img-fluid rounded mb-4">
+                    <div class="text">
+                        <p>Promoción y colocación de inmuebles, inventarios, captación de inmuebles y funciones de apoyo administrativo.</p>
+                    </div>
+                </div>
+                <hr>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-5 mb-lg-5">
+                <div class="team-member">
                     <img src="images/agents/agent_3.3.png" alt="Image" class="img-fluid rounded mb-4">
                     <div class="text">
                         <p>Manejo y control de la cartera del grupo de clientes, control de pagos y moras, relacionamiento con la aseguradora para las conciliaciones de siniestros, cobro y gestión de cartera pendiente.</p>
@@ -78,6 +87,15 @@
                     <img src="images/agents/agent_9.9.png" alt="Image" class="img-fluid rounded mb-4">
                     <div class="text">
                         <p>atención a todos los requerimientos sobre daños y mejoras en los inmuebles y pendientes por inventarios.</p>
+                    </div>
+                </div>
+                <hr>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-5 mb-lg-5">
+                <div class="team-member">
+                    <img src="images/agents/agent_8.8.png" alt="Image" class="img-fluid rounded mb-4">
+                    <div class="text">
+                        <p>Atención y gestión de todos los requerimientos relacionados con mantenimiento, mejoras en infraestructura y control de inventarios pendientes dentro de la empresa.</p>
                     </div>
                 </div>
                 <hr>

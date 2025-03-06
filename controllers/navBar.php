@@ -36,6 +36,9 @@ $currentPage = basename($_SERVER["PHP_SELF"]);
             <li class="nav-item <?php echo $currentPage == "add_property.php" ? "active" : "" ?>">
               <a href="add_property.php">Tu Propiedad</a>
             </li>
+            <li class="nav-item <?php echo $currentPage == "add_property.php" ? "active" : "" ?>">
+              <a href="https://portalpagos.davivienda.com/#/comercio/10783/SOMOS%20PROPIEDAD" target="_blank">Pagos en línea</a>
+            </li>
             <li class="nav-item <?php echo $currentPage == "https://somospropiedad.com/admin" ? "active" : "" ?>">
               <a href="https://somospropiedad.com/admin" target="_blank"><i class="bi bi-ui-checks-grid"></i> Administración</a>
             </li>

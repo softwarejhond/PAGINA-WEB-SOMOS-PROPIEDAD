@@ -82,7 +82,11 @@
     left: 120%; /* Ajustar distancia entre botones */
     transform: translate(-50%, -50%);
   }
-
+  .hvr-region:hover .btn4 {
+    top: 120%; /* Ajustar distancia para que el botón se vea abajo */
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
   /* Estilos generales para los enlaces */
   .hvr-region a {
     text-decoration: none;
@@ -247,14 +251,17 @@
   <i class="fas fa-share-alt main-icon"></i>
   
   <!-- Botones de redes sociales -->
-  <a href="https://www.facebook.com/somospropiedadinmobiliaria" target="_blank" class="btn btn1">
-    <i class="fab fa-facebook-f" aria-hidden="true"></i>
+  <a href="https://portalpagos.davivienda.com/#/comercio/10783/SOMOS%20PROPIEDAD" target="_blank" class="btn btn1">
+    <i class="fas fa-money-bill-wave" aria-hidden="true"></i>
   </a>
-  <a href="https://wa.link/hmoin4" target="_blank" class="btn btn2">
+  <a href="https://www.instagram.com/somospropiedad_inmobiliaria/?igsh=am5hY25vdjk1Nmxp#" target="_blank" class="btn btn2">
+    <i class="fab fa-instagram" aria-hidden="true"></i>
+  </a>
+  <a href="https://wa.link/hmoin4" target="_blank" class="btn btn3">
     <i class="fab fa-whatsapp" aria-hidden="true"></i>
   </a>
-  <a href="https://www.instagram.com/somospropiedad_inmobiliaria/?igsh=am5hY25vdjk1Nmxp#" target="_blank" class="btn btn3">
-    <i class="fab fa-instagram" aria-hidden="true"></i>
+  <a href="https://www.facebook.com/somospropiedadinmobiliaria" target="_blank" class="btn btn4">
+  <i class="fab fa-facebook-f" aria-hidden="true"></i>
   </a>
 </div>
 
