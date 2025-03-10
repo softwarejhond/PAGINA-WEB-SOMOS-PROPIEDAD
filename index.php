@@ -272,20 +272,7 @@
 
   <?php include './controllers/scripts.php' ?>
   <script type="text/javascript" src="js/departamentos_municipios_barrios.js?v=1"></script>
-  <script>
-document.addEventListener("DOMContentLoaded", function() {
-    Swal.fire({
-        title: "Apreciado arrendatario",
-        html: "<b>¡Evite ser estafado!</b><br><br>" + 
-              "Nuestra página web <b>no está habilitada para pagos por PSE</b>, por lo que no es necesario ingresar usuario ni contraseña.<br><br>" +
-              "Para brindarle una solución alternativa, lo invitamos a contactarnos al área de cartera al teléfono <b>3194534526</b>.<br><br>" +
-              "Muchas gracias por su comprensión.",
-        icon: "warning",
-        confirmButtonText: "Entendido",
-        confirmButtonColor: "#d33"
-    });
-});
-</script>
+
 </body>
 
 </html>
