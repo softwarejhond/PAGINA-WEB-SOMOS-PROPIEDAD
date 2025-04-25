@@ -21,15 +21,6 @@
           
             <div class="col-md-6 col-lg-4 mb-5 mb-lg-5">
                 <div class="team-member">
-                    <img src="images/agents/agent_1.1.png" alt="Image" class="img-fluid rounded mb-4">
-                    <div class="text">
-                        <p>Apoya al proceso contable de la compañía, control de pago de obligaciones tributarias, elaboración de informes contables, elaboración de informes financieros, control de facturación, pago de nómina, manejo de caja menor y apoyo administrativo en labores de gestión humana.</p>
-                    </div>
-                </div>
-                <hr>
-            </div>
-            <div class="col-md-6 col-lg-4 mb-5 mb-lg-5">
-                <div class="team-member">
                     <img src="images/agents/agent_4.4.png" alt="Image" class="img-fluid rounded mb-4">
                     <div class="text">
                         <p>Elaboración de estudios con la aseguradora, elaboración de contratos de arrendamiento y de mandato, programación de entrega de inmuebles, asesoría en la elaboración de contratos, asesoría en el arrendamiento de inmuebles, promoción y colocación de inmuebles.</p>
@@ -84,7 +75,7 @@
             </div>
             <div class="col-md-6 col-lg-4 mb-5 mb-lg-5">
                 <div class="team-member">
-                    <img src="images/agents/agent_9.9.png" alt="Image" class="img-fluid rounded mb-4">
+                    <img src="images/agents/agent_9.9.0.png" alt="Image" class="img-fluid rounded mb-4">
                     <div class="text">
                         <p>atención a todos los requerimientos sobre daños y mejoras en los inmuebles y pendientes por inventarios.</p>
                     </div>

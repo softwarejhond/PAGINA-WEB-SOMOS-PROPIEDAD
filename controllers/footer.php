@@ -38,7 +38,7 @@
                 <div>
                     <a href="https://www.facebook.com/somospropiedadinmobiliaria" target="__blank"
                         class="pl-0 pr-3"><span class="icon-facebook"></span></a>
-                    <a href="https://www.instagram.com/somospropiedad_inmobiliaria?igsh=am5hY25vdjk1Nmxp" target="__blank"
+                    <a href="https://www.instagram.com/somos_propiedad_inmobiliaria?igsh=YWk0cGJweWo2dHlh&utm_source=qr" target="__blank"
                         class="pl-3 pr-3"><span class="icon-instagram"></span></a>
                     <a href="https://wa.link/hmoin4" target="__blank" class="pl-3 pr-3"><span
                             class="icon-whatsapp"></span></a>
