@@ -11,7 +11,7 @@
         <div class="row">
             <div class="col-md-6 col-lg-4 mb-5 mb-lg-5">
                 <div class="team-member">
-                    <img src="images/agents/agent_2.2.png" alt="Image" class="img-fluid rounded mb-4">
+                    <img src="images/agents/agent_9.9.0.png" alt="Image" class="img-fluid rounded mb-4">
                     <div class="text">
                         <p>Control bancario, pagos diarios a propietarios y proveedores, conciliaciones bancarias, apoyo contable.</p>
                     </div>
@@ -75,14 +75,13 @@
             </div>
             <div class="col-md-6 col-lg-4 mb-5 mb-lg-5">
                 <div class="team-member">
-                    <img src="images/agents/agent_9.9.0.png" alt="Image" class="img-fluid rounded mb-4">
+                    <img src="images/agents/agent_9.9.png" alt="Image" class="img-fluid rounded mb-4">
                     <div class="text">
-                        <p>atención a todos los requerimientos sobre daños y mejoras en los inmuebles y pendientes por inventarios.</p>
+                        <p>Atención a todos los requerimientos sobre daños y mejoras en los inmuebles y pendientes por inventarios.</p>
                     </div>
                 </div>
                 <hr>
-            </div>
-            <div class="col-md-6 col-lg-4 mb-5 mb-lg-5">
+            </div>            <div class="col-md-6 col-lg-4 mb-5 mb-lg-5">
                 <div class="team-member">
                     <img src="images/agents/agent_8.8.png" alt="Image" class="img-fluid rounded mb-4">
                     <div class="text">
