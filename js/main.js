@@ -202,11 +202,13 @@ jQuery(document).ready(function($) {
 				stagePadding: 0,
 		    margin: 0,
 		    autoplay: true,
+		    autoplayTimeout: 5000,
 		    pauseOnHover: false,
 		    nav: true,
+		    dots: true,
 		    animateOut: 'fadeOut',
 		    animateIn: 'fadeIn',
-		    navText: ['<span class="icon-arrow_back">', '<span class="icon-arrow_forward">']
+		    navText: ['<i class="fas fa-chevron-left"></i>', '<i class="fas fa-chevron-right"></i>']
 		  });
 	  }
 

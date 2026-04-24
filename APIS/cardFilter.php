@@ -1,41 +1,36 @@
 <?php
 require('conexion.php');
 
-// Definir un valor predeterminado para la variable $buscar
 $buscar = isset($_GET['buscar']) ? $conn->real_escape_string($_GET['buscar']) : '';
 
-// Definir el número de ítems por página
 define('NUM_ITEMS_BY_PAGE', 12);
 
-// Consulta para contar el total de productos
 $sql_count = "SELECT COUNT(*) as total_products 
 FROM proprieter
 INNER JOIN municipios ON proprieter.Municipio = municipios.id_municipio
 WHERE codigo LIKE '%$buscar%' AND nombre_inquilino = '' AND estadoPropietario = 'ACTIVO'";
 
-// Ejecutar la consulta
 $result_count = $conn->query($sql_count);
 
 if ($result_count) {
     $row_count = $result_count->fetch_assoc();
     $num_total_rows = $row_count['total_products'];
 } else {
-    // Manejar el error si la consulta falla
-    echo "Error al realizar la consulta: " . $conn->error;
     $num_total_rows = 0;
 }
-
-// Formatear un valor ejemplo (reemplazar $row['valor_canon'] con un dato válido)
-$row = ['valor_canon' => 1500000]; // Esto es solo un ejemplo para evitar errores
-$canonFormateado = number_format($row['valor_canon'], 0, ',', '.');
-
 ?>
+
+<!-- ──────────────────────────────────────────────
+     SECCIÓN PRINCIPAL CON PARTÍCULAS DE FONDO
+────────────────────────────────────────────── -->
+<div class="cardfilter-wrapper">
+<div id="particles-js"></div>
 
 <!-- Formulario de filtros -->
 <div class="site-section site-section-sm pb-0">
     <div class="container">
         <div class="row">
-            <form id="filterForm" class="form-search col-md-12" style="margin-top: -100px; border-radius: 10px;">
+            <form id="filterForm" class="form-search form-search--glass col-md-12" style="margin-top: -100px; border-radius: 14px;">
                 <div class="row align-items-end">
                     <!-- Tipo de Inmueble -->
                     <div class="col-md-3">
@@ -150,27 +145,18 @@ $canonFormateado = number_format($row['valor_canon'], 0, ',', '.');
         <div id="resultsContainer"></div>
     </div>
 </div>
+
 <!-- Controles de paginación -->
-<br>
-<nav aria-label="Page navigation example">
-    <ul id="paginationContainer" class="pagination justify-content-center">
-        <!-- Aquí se llenarán dinámicamente los botones de paginación -->
+<nav aria-label="Paginación de propiedades">
+    <ul id="paginationContainer" class="pagination justify-content-center pagination--glass">
     </ul>
-    <div class="paginationControls mb-3 float-right">
+    <div class="paginationControls mb-3 float-right d-none">
         <span id="pageInfo"></span>
         <span id="totalResults"></span>
     </div>
 </nav>
-
-
-<!-- Agrega esta línea para mostrar el total de resultados -->
-<br>
-
-<br>
-</div>
-
-<!-- Modal -->
-<!-- Modal -->
+<br><br>
+</div><!-- /.cardfilter-wrapper -->
 
 <script>
     const NUM_ITEMS_BY_PAGE = <?php echo NUM_ITEMS_BY_PAGE; ?>;
@@ -321,186 +307,139 @@ $canonFormateado = number_format($row['valor_canon'], 0, ',', '.');
         resultsContainer.innerHTML = '';
 
         if (data.length === 0) {
-            resultsContainer.innerHTML = '<p>No se encontraron resultados.</p>';
+            resultsContainer.innerHTML = '<p class="text-center py-5">No se encontraron resultados.</p>';
             return;
         }
 
         const cardContainer = document.createElement('div');
         cardContainer.classList.add('row', 'justify-content-center');
 
-        // Iterar sobre los datos y crear las tarjetas en columnas de 3
-        data.forEach((item, index) => {
-            // Crear columna
+        data.forEach((item) => {
             const cardCol = document.createElement('div');
-            cardCol.classList.add('col-md-6', 'col-lg-4', 'col-sm-12', 'mb-3');
+            cardCol.classList.add('col-md-6', 'col-lg-4', 'col-sm-12', 'mb-4');
 
-            // Crear tarjeta
-            const card = document.createElement('div');
-            card.classList.add('card', 'h-100');
-
-            // Formatear el valor del canon
             const valorCanonFormatted = new Intl.NumberFormat('es-CO').format(item.valor_canon);
+            const isRent = item.condicion && item.condicion.toUpperCase().includes('ALQUILER');
 
-            // Contenido de la tarjeta
-            const cardContent = `
-            <div class="card" style="width: 100%;">
-              <!-- Carrusel -->
-              <div id="carousel${item.codigo}" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                  ${item.fotos.map((foto, index) => {
-                    const rutaImagen = `https://somospropiedad.com/admin/fotos/${item.codigo}/${foto}`;
-                    return `
-                      <div class="carousel-item ${index === 0 ? 'active' : ''}">
-                        <img src="${rutaImagen}" class="d-block w-100" alt="Foto de la propiedad" style="height:400px;" onerror="this.onerror=null; this.src='ruta_a_imagen_defecto.jpg';">
-                      </div>
-                    `;
-                  }).join('')}
+            const fotos = Array.isArray(item.fotos) && item.fotos.length > 0
+                ? item.fotos
+                : ['placeholder.jpg'];
+
+            const carouselItems = fotos.map((foto, idx) => {
+                const src = `https://somospropiedad.com/admin/fotos/${item.codigo}/${foto}`;
+                return `<div class="carousel-item ${idx === 0 ? 'active' : ''}">
+                    <img src="${src}" class="prop-card-img d-block w-100"
+                         alt="Foto propiedad ${item.codigo}"
+                         onerror="this.onerror=null;this.src='https://somospropiedad.com/admin/images/no-image.png'">
+                  </div>`;
+            }).join('');
+
+            cardCol.innerHTML = `
+              <div class="prop-card-glass h-100 d-flex flex-column">
+                <div id="carousel${item.codigo}" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner prop-carousel-inner">
+                    ${carouselItems}
+                  </div>
+                  <button class="carousel-control-prev" type="button"
+                          data-bs-target="#carousel${item.codigo}" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                  </button>
+                  <button class="carousel-control-next" type="button"
+                          data-bs-target="#carousel${item.codigo}" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                  </button>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carousel${item.codigo}" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Anterior</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carousel${item.codigo}" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Siguiente</span>
-                </button>
+                <div class="prop-card-body flex-grow-1 d-flex flex-column p-3">
+                  <span class="prop-badge prop-badge--${isRent ? 'rent' : 'sale'} mb-2">
+                    <i class="fas fa-${isRent ? 'key' : 'tag'} me-1"></i>${item.condicion}
+                  </span>
+                  <h6 class="prop-card-title mb-1">
+                    ${item.tipoInmueble}
+                    <span class="prop-card-code">${item.codigo}</span>
+                  </h6>
+                  <ul class="prop-card-info flex-grow-1 mt-1 mb-2">
+                    <li><i class="bi bi-geo-alt-fill"></i> ${item.direccion}</li>
+                    <li>
+                      <i class="bi bi-bar-chart-steps"></i> Nivel ${item.nivel_piso}
+                      &nbsp;&nbsp;<i class="bi bi-bounding-box"></i> ${item.area} m²
+                    </li>
+                  </ul>
+                  <div class="prop-card-price">$ ${valorCanonFormatted}</div>
+                  <a href="https://somospropiedad.com/admin/detalle_inmueble.php?codigo=${item.codigo}"
+                     target="_blank" rel="noopener" class="prop-card-cta mt-2">
+                    Ver Propiedad&nbsp;<i class="fas fa-arrow-right"></i>
+                  </a>
+                </div>
               </div>
-              <!-- Fin del Carrusel -->
-              <div class="card-body">
-                <button class="btn bg-amber-dark text-left text-white m-1" type="button">
-                  <span class="spinner-grow spinner-grow-sm text-lime-dark" role="status" aria-hidden="true"></span>
-                  ${item.condicion}
-                </button>
-                <button class="btn bg-teal-dark text-left text-white m-1" type="button" data-bs-toggle="modal" 
-      data-bs-target="#modalInfo${item.codigo}" >
-                  Ver más
-                </button>
-                 <ul class="list-group list-group-flush">
-    <li class="list-group-item"> <h5 class="prop-title text-left text-uppercase text-magenta-dark "><b>${item.tipoInmueble} - ${item.codigo}</b></h5></li>
-    <li class="list-group-item"><i class="bi bi-geo-alt-fill"></i> ${item.direccion}</li>
-    <li class="list-group-item"><i class="bi bi-bar-chart-steps"></i> NIVEL: ${item.nivel_piso}</li>
-     <li class="list-group-item"><i class="bi bi-bounding-box"></i> ÁREA: ${item.area} </li>
-    <li class="list-group-item"><h5 class="text-magenta-dark"><b>$ ${valorCanonFormatted}</b></h5></li>
-  </ul>
-              </div>
-            </div>
-<!-- Modal -->
-            <div class="modal fade" id="modalInfo${item.codigo}" tabindex="-1" aria-labelledby="propertyModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="propertyModalLabel">
-          <i class="bi bi-ticket-detailed-fill"></i> Detalles de la Propiedad
-        </h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body text-center" id="propertyDetails${item.codigo}">
-        <div class="row">
-          <div class="col col-lg-4 col-md-4 col-sm-12">
-            <p class="prop-text">
-              <img src="images/icons/bed.png" width="30px" />
-            </p>
-            <p class="prop-text-modal">Alcobas</p>
-            <p class="prop-numb-modal text-magenta-dark">
-              <b>${item.alcobas}</b>
-            </p>
+            `;
 
-            <p class="prop-text">
-              <img src="images/icons/signage.png" width="30px" />
-            </p>
-            <p class="prop-text-modal">Parqueadero</p>
-            <p class="prop-numb-modal text-magenta-dark">
-              <b>${item.parqueadero}</b>
-            </p>
-
-            <p class="prop-text">
-              <img src="images/icons/patio.png" width="30px" />
-            </p>
-            <p class="prop-text-modal">Patio</p>
-            <p class="prop-numb-modal text-magenta-dark">
-              <b>${item.patio}</b>
-            </p>
-          </div>
-          <div class="col col-md-4">
-            <p class="prop-text">
-              <img src="images/icons/toilet.png" width="30px" />
-            </p>
-            <p class="prop-text-modal">Baños</p>
-            <p class="prop-numb-modal text-magenta-dark">
-              <b>${item.servicios}</b>
-            </p>
-            <p class="prop-text">
-              <img src="images/icons/area.png" width="30px" />
-            </p>
-            <p class="prop-text-modal">Área</p>
-            <p class="prop-numb-modal text-magenta-dark">
-              <b>${item.area} m²</b>
-            </p>
-            <p class="prop-text">
-              <img src="images/icons/elevator.png" width="30px" />
-            </p>
-            <p class="prop-text-modal">Ascensor</p>
-            <p class="prop-numb-modal text-magenta-dark">
-              <b>${item.ascensor}</b>
-            </p>
-          </div>
-          <div class="col col-md-4">
-            <p class="prop-text">
-              <img src="images/icons/kitchen.png" width="30px" />
-            </p>
-            <p class="prop-text-modal">Cocina</p>
-            <p class="prop-numb-modal text-magenta-dark">
-              <b>${item.cocina}</b>
-            </p>
-            <p class="prop-text">
-              <img src="images/icons/level.png" width="30px" />
-            </p>
-            <p class="prop-text-modal">Nivel</p>
-            <p class="prop-numb-modal text-magenta-dark">
-              <b>${item.nivel_piso}</b>
-            </p>
-            <p class="prop-text">
-              <img src="images/icons/closet.png" width="30px" />
-            </p>
-            <p class="prop-text-modal">Closets</p>
-            <p class="prop-numb-modal text-magenta-dark">
-              <b>${item.closet}</b>
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn bg-magenta-dark text-white" data-bs-dismiss="modal">Cerrar</button>
-      </div>
-    </div>
-  </div>
-</div>
-        `;
-
-            card.innerHTML = cardContent;
-            cardCol.appendChild(card); // Agregar tarjeta a la columna
-            cardContainer.appendChild(cardCol); // Agregar columna al contenedor
+            cardContainer.appendChild(cardCol);
         });
 
-        resultsContainer.appendChild(cardContainer); // Agregar todo el contenedor al contenedor principal
+        resultsContainer.appendChild(cardContainer);
+
+        // Inicializar carruseles Bootstrap creados dinámicamente
+        if (typeof bootstrap !== 'undefined' && bootstrap.Carousel) {
+            cardContainer.querySelectorAll('.carousel').forEach(function(el) {
+                new bootstrap.Carousel(el, { interval: 3500, ride: true, touch: true });
+            });
+        }
+
+        // Reinicializar particles para que el canvas se redimensione al nuevo alto del wrapper
+        reinitParticles();
     }
-
-
 
     function updatePaginationInfo() {
-        const currentPageSpan = document.getElementById('currentPage');
-        const totalPagesSpan = document.getElementById('totalPages');
-        const totalResultsSpan = document.getElementById(
-            'totalResults'); // Nuevo elemento para mostrar el total de resultados
-
-        if (currentPageSpan && totalPagesSpan && totalResultsSpan) {
-            currentPageSpan.textContent = currentPage;
-            totalPagesSpan.textContent = totalPages;
-            totalResultsSpan.textContent =
-                `Total: ${num_total_rows} resultados`; // Actualiza el texto con el total de resultados
-        } else {
-            console.error('Error: Elements not found.');
+        const totalResultsSpan = document.getElementById('totalResults');
+        if (totalResultsSpan) {
+            totalResultsSpan.textContent = '';
         }
     }
+</script>
+
+<!-- Particles.js -->
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script>
+const PARTICLES_CONFIG = {
+    "particles": {
+        "number": { "value": 250, "density": { "enable": true, "value_area": 900 } },
+        "color": { "value": "#ec008c" },
+        "shape": { "type": "circle" },
+        "opacity": {
+            "value": 0.4,
+            "random": true,
+            "anim": { "enable": true, "speed": 1.2, "opacity_min": 0.05, "sync": false }
+        },
+        "size": { "value": 3, "random": true },
+        "line_linked": { "enable": false },
+        "move": {
+            "enable": true, "speed": 1.4, "direction": "none",
+            "random": true, "straight": false, "out_mode": "out"
+        }
+    },
+    "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+            "onhover": { "enable": true, "mode": "repulse" },
+            "onclick": { "enable": false },
+            "resize": true
+        }
+    },
+    "retina_detect": true
+};
+
+function reinitParticles() {
+    // Destruir instancia anterior si existe para evitar canvas apilados
+    if (window.pJSDom && window.pJSDom.length > 0) {
+        window.pJSDom[0].pJS.fn.vendors.destroypJS();
+        window.pJSDom = [];
+    }
+    particlesJS("particles-js", PARTICLES_CONFIG);
+}
+
+// Inicialización primera carga
+reinitParticles();
 </script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

@@ -4,101 +4,137 @@
 <head>
   <?php include './controllers/head.php' ?>
   <style>
-  /* Contenedor flotante */
-  .hvr-region {
-    position: fixed;
-    bottom: 5%;
-    right: 5%;
-    border-radius: 50%;
-    width: 80px;
-    height: 80px;
-    background-color: #e5097f;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    z-index: 9999;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
-  }
+    /* Contenedor flotante */
+    .hvr-region {
+      position: fixed;
+      bottom: 5%;
+      right: 5%;
+      border-radius: 50%;
+      width: 80px;
+      height: 80px;
+      background-color: #e5097f;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      z-index: 9999;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.3s;
+    }
 
-  /* Icono principal (compartir) */
-  .hvr-region .main-icon {
-    font-size: 30px;
-    color: #fff;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    transition: opacity 0.3s, transform 0.3s;
-  }
+    /* Icono principal (compartir) */
+    .hvr-region .main-icon {
+      font-size: 30px;
+      color: #fff;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      transition: opacity 0.3s, transform 0.3s;
+    }
 
-  /* Botones de redes sociales */
-  .hvr-region .btn {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50px;
-    height: 50px;
-    background-color: #e5097f;
-    color: #fff;
-    border-radius: 50%;
-    opacity: 0;
-    transform: translate(-50%, -50%);
-    transition: opacity 0.3s, transform 0.3s;
-    font-size: 20px;
-    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
-    pointer-events: none; /* Desactivado por defecto */
-  }
+    /* Botones de redes sociales */
+    .hvr-region .btn {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50px;
+      height: 50px;
+      background-color: #e5097f;
+      color: #fff;
+      border-radius: 50%;
+      opacity: 0;
+      transform: translate(-50%, -50%);
+      transition: opacity 0.3s, transform 0.3s;
+      font-size: 20px;
+      box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+      pointer-events: none;
+      /* Desactivado por defecto */
+    }
 
-  /* Efecto hover para mostrar los botones */
-  .hvr-region:hover {
-    background-color: rgba(255, 255, 255, 0);
-  }
+    /* Efecto hover para mostrar los botones */
+    .hvr-region:hover {
+      background-color: rgba(255, 255, 255, 0);
+    }
 
-  .hvr-region:hover .main-icon {
-    opacity: 0;
-    transform: translate(-50%, -50%) rotate(180deg);
-  }
+    .hvr-region:hover .main-icon {
+      opacity: 0;
+      transform: translate(-50%, -50%) rotate(180deg);
+    }
 
-  .hvr-region:hover .btn {
-    opacity: 1;
-    pointer-events: auto; /* Activar interacción al hover */
-  }
+    .hvr-region:hover .btn {
+      opacity: 1;
+      pointer-events: auto;
+      /* Activar interacción al hover */
+    }
 
-  /* Posición de los botones */
-  .hvr-region:hover .btn1 {
-    top: -20px;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
+    /* Posición de los botones */
+    .hvr-region:hover .btn1 {
+      top: -20px;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
 
-  .hvr-region:hover .btn2 {
-    top: 50%;
-    left: -20px;
-    transform: translate(-50%, -50%);
-  }
+    .hvr-region:hover .btn2 {
+      top: 50%;
+      left: -20px;
+      transform: translate(-50%, -50%);
+    }
 
-  .hvr-region:hover .btn3 {
-    top: 50%;
-    left: 120%; /* Ajustar distancia entre botones */
-    transform: translate(-50%, -50%);
-  }
-  .hvr-region:hover .btn4 {
-    top: 120%; /* Ajustar distancia para que el botón se vea abajo */
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  /* Estilos generales para los enlaces */
-  .hvr-region a {
-    text-decoration: none;
-    color: inherit;
-  }
+    .hvr-region:hover .btn3 {
+      top: 50%;
+      left: 120%;
+      /* Ajustar distancia entre botones */
+      transform: translate(-50%, -50%);
+    }
 
-  /* Asegúrate de incluir FontAwesome */
-  @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
-</style>
+    .hvr-region:hover .btn4 {
+      top: 120%;
+      /* Ajustar distancia para que el botón se vea abajo */
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
 
-</style>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    /* Estilos generales para los enlaces */
+    .hvr-region a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Asegúrate de incluir FontAwesome */
+    @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+
+    .btn-pago-fijo {
+      position: fixed;
+      bottom: 180px;
+      right: 5%;
+      width: 80px;
+      height: 80px;
+      background-color: #006d68;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      z-index: 9998;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      border: none;
+    }
+
+    .btn-pago-fijo:hover {
+      background-color: #006d68;
+      transform: scale(1.1);
+    }
+
+    .btn-pago-fijo i {
+      color: white;
+      font-size: 36px;
+    }
+  </style>
+
+  </style>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 
 </head>
 
@@ -247,23 +283,25 @@
       </div>
     </div>
     <div class="hvr-region">
-  <!-- Icono principal de compartir -->
-  <i class="fas fa-share-alt main-icon"></i>
-  
-  <!-- Botones de redes sociales -->
-  <a href="https://portalpagos.davivienda.com/#/comercio/10783/SOMOS%20PROPIEDAD" target="_blank" class="btn btn1">
-    <i class="fas fa-money-bill-wave" aria-hidden="true"></i>
-  </a>
-  <a href="https://www.instagram.com/somos_propiedad_inmobiliaria/?igsh=YWk0cGJweWo2dHlh&utm_source=qr#" target="_blank" class="btn btn2">
-    <i class="fab fa-instagram" aria-hidden="true"></i>
-  </a>
-  <a href="https://wa.link/hmoin4" target="_blank" class="btn btn3">
-    <i class="fab fa-whatsapp" aria-hidden="true"></i>
-  </a>
-  <a href="https://www.facebook.com/somospropiedadinmobiliaria" target="_blank" class="btn btn4">
-  <i class="fab fa-facebook-f" aria-hidden="true"></i>
-  </a>
-</div>
+      <!-- Icono principal de compartir -->
+      <i class="fas fa-share-alt main-icon"></i>
+
+      <!-- Botones de redes sociales -->
+
+      <a href="https://www.facebook.com/somospropiedadinmobiliaria" target="_blank" class="btn btn1">
+        <i class="fab fa-facebook-f" aria-hidden="true"></i>
+      </a>
+      <a href="https://www.instagram.com/somos_propiedad_inmobiliaria/?igsh=YWk0cGJweWo2dHlh&utm_source=qr#" target="_blank" class="btn btn2">
+        <i class="fab fa-instagram" aria-hidden="true"></i>
+      </a>
+      <a href="https://wa.link/hmoin4" target="_blank" class="btn btn3">
+        <i class="fab fa-whatsapp" aria-hidden="true"></i>
+      </a>
+    </div>
+
+    <a href="https://gateway2.tucompra.com.co/sites/somospropiedad" target="_blank" class="btn-pago-fijo">
+      <i class="bi bi-currency-dollar"></i>
+    </a>
 
     <?php include './controllers/footer.php'; ?>
 

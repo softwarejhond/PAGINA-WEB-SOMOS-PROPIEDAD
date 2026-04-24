@@ -3,8 +3,8 @@
         <div class="row">
             <div class="col-lg-3">
                 <div class="mb-5">
-               <img src="images/logo.png" alt="logo" width="150px"> 
-            </div>
+                    <img src="images/logo.png" alt="logo" width="150px">
+                </div>
             </div>
             <div class="col-lg-3 mb-5 mb-lg-0">
                 <div class="row mb-5">
@@ -47,19 +47,18 @@
         </div>
         <div class="row pt-5 mt-5 text-center">
             <div class="col-md-12">
-            <?php
+                <?php
 
-$queryCompany = mysqli_query($conn, "SELECT nombre,nit FROM company");
-while ($empresaLog = mysqli_fetch_array($queryCompany)) {
-    $empresa = $empresaLog['nombre'] . '</label>';
-}
- ?>
-<br>
-<b class="text-white">&copy; Copyright <?php echo date("Y"); ?> Todos los derechos de uso para <label class="text-magenta-dark"><b><?php echo $empresa ?> </b></label><br>
-Made by <a class="text-light" href="https://agenciaeaglesoftware.com/" target="_blank">Agencia de Desarrollo Eagle Software</a>
+                $queryCompany = mysqli_query($conn, "SELECT nombre,nit FROM company");
+                while ($empresaLog = mysqli_fetch_array($queryCompany)) {
+                    $empresa = $empresaLog['nombre'] . '</label>';
+                }
+                ?>
+                <p class="text-white mb-0" style="white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">
+                    &copy; Copyright <?php echo date("Y"); ?> &mdash; Todos los derechos de uso para <strong class="text-magenta-dark"><?php echo htmlspecialchars(rtrim($empresa, '</label>')); ?></strong> &mdash;
+                    Made by Agencia de Desarrollo <a class="text-light font-sparose" href="https://agenciaeaglesoftware.com/" target="_blank" style="font-size:1.05em; letter-spacing:.03em;">Eagle Software</a>
+                </p>
             </div>
-
         </div>
     </div>
 </footer>
-
